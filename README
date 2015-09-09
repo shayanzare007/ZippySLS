@@ -1,0 +1,15 @@
+To use this code, import the project into eclipse and look at our main class Simulation.java. The object Simulation takes a list of parameters we will exhaustively explain in this file. Just select the parameters according the experiments you want to lead and run it.
+Using loops on the parameters, you may find it useful to try different combinations and store them in a table to retrieve them later (to write on a file in our case).
+Currently, the main is less modular than the other classes since, for each experiment, we have a different set of arguments to try. Thus, the table where we store our results has a hard coded size that needs to be changed each time you run the simulations with another set of parameters.
+
+The parameters:
+
+int number_features: Number of bits in the bit string
+int computation_cost/random_move_cost: The computational cost of each kind of move, this hasn’t been used yet but we think it is relevant for further research in this area
+double Pr: Probability of random move
+HashMap<String,Integer> graph: the Map that contains bit strings and their scores
+int MAX_TRIES: total number of tries before leaving the algorithm, if optimal solution not found
+int restart_parameter: equivalent to MAX_FLIPS in SLS
+double restart_probability: probability of restart at each step, we derive it from the previous parameter using the formula: restart_probability = 1/ restart_parameter
+double p_init: probability of initializing correctly one bit of the initial bit string.
+
